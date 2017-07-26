@@ -1,0 +1,73 @@
+﻿@model TeamProgrammer.UniversityManagement.Core.Entities.Department
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Department</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DeptName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeptName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeptCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeptCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeptCredit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeptCredit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adminstrator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adminstrator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StratDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StratDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Building)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Building)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
